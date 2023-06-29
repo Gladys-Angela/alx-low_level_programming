@@ -1,21 +1,43 @@
-
 #include "holberton.h"
 
 /**
-	* puts2 - updates the value it points to to 98.
-	* @str: a variable as referencia
-	* followed by a new line.
-	* Return: none.
-	*/
+ * *cap_string - capitalize words
+ * @str: pointer
+ * Return: capitalzied string
+*/
 
-void puts2(char *str)
+char *cap_string(char *str)
 {
-	int i;
+char sep[] = ",\t;\n; .!?\"(){}";
+int flag, i, ii;
 
-	for (i = 0; str[i] != 0 ; i++)
+for (i = 0; str[i] != '\0'; i++)
+{
+	flag = 0;
+
+	if (i == 0)
 	{
-		if (i % 2 == 0)
-		_putchar(str[i]);
+		flag = 1;
 	}
-_putchar('\n');
+	else
+	{
+		for (ii = 0; sep[ii] != '\0'; ii++)
+		{
+			if (str[i - 1] == sep[ii])
+			{
+				flag = 1;
+				break;
+			}
+		}
+	}
+
+	if (flag == 1)
+	{
+		if (str[i] <= 'z' && str[i] >= 'a')
+		{
+			str[i] -= ('a' - 'A');
+		}
+	}
+}
+return (str);
 }

@@ -1,26 +1,17 @@
 #include "holberton.h"
-
 /**
- * rev_string - reverses a string
- * @s: string to reverse
- *
- * Return: void
- */
-void rev_string(char *s)
-{
-	int i = 0, j = 0;
-	char str[500];
+ * *string_toupper - capitalize a string
+ * @str: pointer
+ * Return: capitalzied string
+*/
 
-	while (*(s + i))
-	{
-		*(str + i) = *(s + i);
-		i++;
-	}
-	i = i - 1;
-	while (i >= 0)
-	{
-		*(s + i) = *(str + j);
-		j++;
-		i--;
-	}
+char *string_toupper(char *str)
+{
+int i;
+for (i = 0; str[i] != '\0'; i++)
+{
+	if (str[i] <= 'z' && str[i] >= 'a')
+		str[i] -= 32;
+}
+return (str);
 }
