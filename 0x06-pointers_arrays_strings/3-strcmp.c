@@ -1,15 +1,21 @@
 #include "holberton.h"
 /**
- * _puts - prints a string, followed by a new line.
- * @str: input string to print.
- */
-void _puts(char *str)
-{
-	while (*str != '\0')
-	{
-		_putchar(*str);
-		str++;
-	}
-	_putchar('\n');
+ * _strcmp - compares two strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: 0 if matching, and ns1 - ns2 if not matching
+*/
 
+int _strcmp(char *s1, char *s2)
+{
+int i;
+
+for (i = 0; s1[i] != '\0' || s2[i] != '\0'; i++)
+{
+	if (s1[i] != s2[i])
+	{
+		return (s1[i] - s2[i]);
+	}
+}
+return (0);
 }

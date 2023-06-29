@@ -1,17 +1,22 @@
+#include "holberton.h"
 /**
- * _strlen - calculates the length of a string.
- * @s: pointer to the character array.
- * Return: length of the string
- */
-int _strlen(char *s)
-{
-	int i;
+ * *_strncpy - find the length of a string
+ * @dest: pointer to the string
+ * @src: pointer
+ * @n: int
+ * Return: destination
+*/
 
-	i = 0;
-	while (*s != '\0')
-	{
-		i++;
-		s++;
-	}
-	return (i);
+
+char *_strncpy(char *dest, char *src, int n)
+{
+int i;
+
+for (i = 0; i < n && src[i] != '\0'; i++)
+	dest[i] = src[i];
+
+for ( ; i < n; i++)
+	dest[i] = '\0';
+
+return (dest);
 }
