@@ -6,7 +6,7 @@ int main(void)
   int a[5];
   int *p;
 
-<<<<<<< HEAD
+
 a[2] = 1024;
 p = &n;
 /*
@@ -21,7 +21,7 @@ p = &n;
 /* ...so that this prints 98\n */
 printf("a[2] = %d\n", a[2]);
 return (0);
-=======
+
   a[2] = 1024;
   p = &n;
   /*
@@ -36,5 +36,4 @@ return (0);
   /* ...so that this prints 98\n */
   printf("a[2] = %d\n", a[2]);
   return (0);
->>>>>>> 44f073303037d79e4aee59aeb7b198231062664c
 }
